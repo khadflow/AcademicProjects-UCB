@@ -1,0 +1,12 @@
+---
+:id: 19165333
+:submitters:
+- :name: Khadijah Flowers
+  :email: chase_hatter@berkeley.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2019-07-31 20:38:07.776035000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2019-07-31 13:38:07.776035000 Z
+:status: processed
+:score: 66.0
