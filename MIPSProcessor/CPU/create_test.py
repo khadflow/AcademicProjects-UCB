@@ -1,9 +1,9 @@
 #! /usr/bin/env python3
 
-import xml.etree.ElementTree as ET
 import argparse
 import os
 import re
+import defusedxml.ElementTree
 
 
 def main(assembly_files, num_cycles):
@@ -83,7 +83,7 @@ def main(assembly_files, num_cycles):
             instructions += "\n"
 
         ### PUTS TESTS INTO CIRCUIT
-        tree = ET.parse('run.circ')
+        tree = defusedxml.ElementTree.parse('run.circ')
         root = tree.getroot()
         circuit = root.find('circuit')
         ROM = circuit.find("./comp/[@name='ROM']")
