@@ -7,8 +7,8 @@ import subprocess
 
 
 def main(args):
-	file = open(args[1])
-	lines = [l for l in file.readlines()]
+	with open(args[1]) as file:
+		lines = [l for l in file.readlines()]
 	def mapper(strr):
 		try: 
 			return hex(int(strr, 2))[2:]
