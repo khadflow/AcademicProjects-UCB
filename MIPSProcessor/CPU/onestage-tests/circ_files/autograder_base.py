@@ -10,6 +10,7 @@ import signal
 import re
 import sys
 import shutil
+from security import safe_command
 
 create = 0
 log = 0
@@ -56,7 +57,7 @@ class AbsoluteTestCase(TestCase):
         stdinf = open('nul')
       except Exception as e:
          print("The no nul directories. Program will most likely error now.")
-    proc = subprocess.Popen(["java","-jar",logisim_location,"-tty","table",self.circfile], stdin=stdinf, stdout=subprocess.PIPE)
+    proc = safe_command.run(subprocess.Popen, ["java","-jar",logisim_location,"-tty","table",self.circfile], stdin=stdinf, stdout=subprocess.PIPE)
     try:
       assure_path_exists(self.outfile)
       outfile = open(self.outfile, "wb")
