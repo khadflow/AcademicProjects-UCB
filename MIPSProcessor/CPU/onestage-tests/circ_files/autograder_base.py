@@ -17,8 +17,7 @@ log = 0
 file_locations = os.path.expanduser(os.getcwd())
 logisim_location = os.path.join(os.getcwd(),"../../logisim-evolution.jar")
 if log:
-  new = open('new.out', 'w')
-  logfile = open('TEST_LOG','w')
+  pass
 
 
 def student_reference_match_unbounded(student_out, reference_out):
